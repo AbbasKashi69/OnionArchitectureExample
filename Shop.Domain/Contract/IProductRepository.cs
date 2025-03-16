@@ -2,9 +2,10 @@
 
 using Shop.Domain.Entities;
 
-namespace Shop.Application.Interfaces.Repositories
+namespace Shop.Domain.Contract
 {
-    public interface IProductRepository
+    public interface IProductRepository : 
+        IGenericRepository<Product>
     {
         Task<List<Product>> GetByCategoryId(int categoryId);
     }

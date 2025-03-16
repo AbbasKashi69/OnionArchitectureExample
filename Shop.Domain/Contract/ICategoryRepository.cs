@@ -1,9 +1,9 @@
 ﻿
 using Shop.Domain.Entities;
 
-namespace Shop.Application.Interfaces.Repositories
+namespace Shop.Domain.Contract
 {
-    public interface ICategoryRepository 
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
     }
 }

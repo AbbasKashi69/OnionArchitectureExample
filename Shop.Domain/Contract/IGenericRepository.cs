@@ -1,12 +1,13 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
 using Shop.Domain.Common.Interfaces;
 
-namespace Shop.Application.Interfaces.Repositories
+namespace Shop.Domain.Contract
 {
     public interface IGenericRepository<T> where T : class, IEntity
     {
-        IQueryable<T> Entities { get; }
+        DbSet<T> Entities { get; }
 
         Task<T?> GetByIdAsync(int id);
         Task<List<T>> GetAllAsync();
